@@ -2,6 +2,7 @@ package com.example.mytodo
 
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() , INoteRVAdapter {
 
     fun submitData(view: View) {
 
-        val input = findViewById(R.id.input)
+        val input: EditText = findViewById(R.id.input)
         val noteText= input.text.toString()
         if(noteText.isNotEmpty()){
             viewModel.insertNote(Note(noteText))
