@@ -51,7 +51,7 @@ class NoteRVAdaptor(private val context: Context, private val listener: INoteRVA
      }
 
        fun  updateList(newList: ArrayList<Note>){
-              all
+
 
        }
 
@@ -59,7 +59,9 @@ class NoteRVAdaptor(private val context: Context, private val listener: INoteRVA
 }
 
 interface  INoteRVAdapter {
-    abstract val recyclerView: Any
+
+
+
 
     fun onItemClicked(note: Note)
 }
