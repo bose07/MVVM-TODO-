@@ -4,9 +4,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
-class MainActivity : AppCompatActivity() , INoteRVAdapter {
+private var Any.layoutManager: LinearLayoutManager
+    get() {}
+    set() {}
+
+class MainActivity(override val recyclerView: Any) : AppCompatActivity() , INoteRVAdapter {
 
 
     lateinit var viewModel: NoteViewModel
