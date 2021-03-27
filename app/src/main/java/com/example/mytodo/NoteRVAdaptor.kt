@@ -43,25 +43,18 @@ class NoteRVAdaptor(private val context: Context, private val listener: INoteRVA
         holder.textView.text = currentNote.text
     }
 
-          fun updatelist(newList:ArrayList<Note>){
-          allNotes.clear()
+          fun updateList(newList:ArrayList<Note>){
+           allNotes.clear()
            allNotes.addAll(newList)
 
              notifyDataSetChanged()
      }
 
-       fun  updateList(newList: ArrayList<Note>){
-
-
-       }
 
 
 }
 
 interface  INoteRVAdapter {
-
-
-
 
     fun onItemClicked(note: Note)
 }
